@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CYBERLAB - OFFICIAL</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Share Tech Mono',monospace}
+body{background:#000;color:#00ff41;overflow-x:hidden}
+canvas{position:fixed;top:0;left:0;z-index:-1}
+header{border-bottom:2px solid #00ff41;padding:20px;text-align:center;box-shadow:0 0 20px #00ff41}
+h1{font-size:2.5rem;letter-spacing:6px;text-shadow:0 0 10px #00ff41}
+.container{max-width:1100px;margin:20px auto;padding:15px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:15px}
+.card{border:1px solid #00ff41;background:rgba(0,255,65,0.05);padding:15px}
+.card h3{color:#fff;margin-bottom:8px}
+.card p{font-size:13px;color:#9effb1;margin-bottom:10px}
+.btn{display:block;width:100%;padding:8px;border:1px solid #00ff41;color:#00ff41;text-align:center;text-decoration:none}
+.btn:hover{background:#00ff41;color:#000}
+footer{text-align:center;padding:20px;border-top:1px solid #00ff41;margin-top:20px;font-size:12px}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<header>
+<h1>CYBERLAB</h1>
+<p>OFFICIAL TOOLS HUB - EST. 2026</p>
+<p>● SYSTEM ONLINE | ROOT ACCESS GRANTED</p>
+</header>
+<div class="container">
+<div class="card"><h3>TERMUX PACK</h3><p>100+ hacking tools for Android</p><a class="btn" href="#">DOWNLOAD</a></div>
+<div class="card"><h3>WIFI HACK</h3><p>Wifite, Aircrack, Fluxion combo</p><a class="btn" href="#">DOWNLOAD</a></div>
+<div class="card"><h3>OSINT SUITE</h3><p>Find anyone with phone/email</p><a class="btn" href="#">DOWNLOAD</a></div>
+<div class="card"><h3>SPAM BOMB</h3><p>SMS/Call bomber tool</p><a class="btn" href="#">DOWNLOAD</a></div>
+<div class="card"><h3>PHISHING LAB</h3><p>Zphisher with 30+ templates</p><a class="btn" href="#">DOWNLOAD</a></div>
+<div class="card"><h3>BRUTE FORCE</h3><p>Hydra + 10M wordlist</p><a class="btn" href="#">DOWNLOAD</a></div>
+</div>
+<footer>Created by MY1453270-DOTCOM | Patna, India<br>For Educational Purpose Only</footer>
+<script>
+const c=document.getElementById("c"),x=c.getContext("2d");c.height=innerHeight;c.width=innerWidth;
+let s="01".split(""),f=10,col=c.width/f,d=[];for(let i=0;i<col;i++)d[i]=1;
+function draw(){x.fillStyle="rgba(0,0,0,0.05)";x.fillRect(0,0,c.width,c.height);x.fillStyle="#0F0";x.font=f+"px monospace";for(let i=0;i<d.length;i++){let t=s[Math.floor(Math.random()*s.length)];x.fillText(t,i*f,d[i]*f);if(d[i]*f>c.height&&Math.random()>0.975)d[i]=0;d[i]++}}setInterval(draw,33);
+</script>
+</body>
+</html>
